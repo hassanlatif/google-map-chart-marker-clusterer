@@ -1,8 +1,8 @@
 /**
- * @fileoverview This demo is used for MarkerClusterer. It will show 100 markers
+ * @fileoverview This demo is used for MarkerClusterer. It will show 10 markers
  * using MarkerClusterer and count the time to show the difference between using
  * MarkerClusterer and without MarkerClusterer.
- * @author Luke Mahe (v2 author: Xiaoxi Wu)
+ * @author Hassan Mughal (v3 author: Luke Mahe, v2 author: Xiaoxi Wu)
  */
 
 function $(element) {
@@ -74,6 +74,7 @@ speedTest.showMarkers = function() {
     var latLng = new google.maps.LatLng(speedTest.pics[i].latitude,
         speedTest.pics[i].longitude);
 
+    var imageOwner = speedTest.pics[i].owner_name;
     var imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=24x32&chco=' +
         'FFFFFF,008CFF,000000&ext=.png';
     var markerImage = new google.maps.MarkerImage(imageUrl,
@@ -81,6 +82,7 @@ speedTest.showMarkers = function() {
 
     var marker = new google.maps.Marker({
       'position': latLng,
+      'title' : imageOwner,
       'icon': markerImage
     });
 

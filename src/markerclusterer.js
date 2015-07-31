@@ -1,17 +1,12 @@
-// ==ClosureCompiler==
-// @compilation_level ADVANCED_OPTIMIZATIONS
-// @externs_url http://closure-compiler.googlecode.com/svn/trunk/contrib/externs/maps/google_maps_api_v3_3.js
-// ==/ClosureCompiler==
-
 /**
- * @name MarkerClusterer for Google Maps v3
+ * @name Chart MarkerClusterer for Google Maps v3
  * @version version 1.0
- * @author Luke Mahe
+ * @author Hassan Mughal (v3 author: Luke Mahe, v2 author: Xiaoxi Wu)
  * @fileoverview
- * The library creates and manages per-zoom-level clusters for large amounts of
+ * The library creates and manages chart based per-zoom-level clusters for large amounts of
  * markers.
  * <br/>
- * This is a v3 implementation of the
+ * This library is derived from
  * <a href="http://gmaps-utility-library-dev.googlecode.com/svn/tags/markerclusterer/"
  * >v2 MarkerClusterer</a>.
  */
@@ -1300,7 +1295,8 @@ ClusterIcon.prototype.renderCharts_ = function () {
         legend: 'none',
         pieHole: 0.5,
         tooltip: {text: 'value'},
-        colors: chartColorsSeq
+        colors: chartColorsSeq,
+        pieSliceText: 'none'
     };
 
     var chart = new google.visualization.PieChart(this.chart_div_);

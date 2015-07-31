@@ -66,21 +66,14 @@
         width: 200px;
       }
     </style>
-
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="../src/markerclusterer.js"></script>
     <script src="data.json"></script>
-    <script>
-      var script = '<script type="text/javascript" src="../src/markerclusterer';
-      if (document.location.search.indexOf('compiled') !== -1) {
-        script += '_compiled';
-      }
-      script += '.js"><' + '/script>';
-      document.write(script);
-    </script>
     <script src="speed_test.js"></script>
-
     <script>
-      google.maps.event.addDomListener(window, 'load', speedTest.init);
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(speedTest.init);
     </script>
     <script>
       var _gaq = _gaq || [];
@@ -98,10 +91,6 @@
   <body>
     <div id="panel">
       <h3>An example of MarkerClusterer v3</h3>
-      <p>
-        <a href="?compiled">Compiled</a> |
-        <a href="?">Standard</a> version of the script.
-      </p>
 
       <div>
         <input type="checkbox" checked="checked" id="usegmm"/>
@@ -111,9 +100,9 @@
       <div>
         Markers:
         <select id="nummarkers">
-          <option value="10">10</option>
+          <option value="10" selected>10</option>
           <option value="50">50</option>
-          <option value="100" selected="selected">100</option>
+          <option value="100">100</option>
           <option value="500">500</option>
           <option value="1000">1000</option>
         </select>
