@@ -9,9 +9,11 @@ This library is derived from the [Google Maps JavaScript API utility libraries o
 
 ![Chart Marker Clusterer Screenshot](https://github.com/hassanlatif/chart-marker-clusterer/blob/master/screenshot.png)
 
+You can access the example [here](https://github.com/hassanlatif/chart-marker-clusterer/blob/master/examples/simple_example.html).
+
 The sample data used in the example is taken from [here](https://gist.githubusercontent.com/gisminister/10001728/raw/traffic_accidents.geojson).
 
-Feel free to suggest improvements.
+Feel free to contribute and/or suggest improvements.
 
 ## License
 
