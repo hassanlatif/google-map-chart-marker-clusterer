@@ -1,4 +1,4 @@
-Chart Marker Clusterer – A Google Maps JavaScript API utility library
+Google Map Chart Marker Clusterer
 ==============
 
 A Google Maps JavaScript API v3 library to render marker clusters as pie-charts categorized on the markers titles.
