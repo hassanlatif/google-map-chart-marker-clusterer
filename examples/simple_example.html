@@ -29,7 +29,7 @@
     </style>
     <script src="traffic_accidents.json"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="http://maps.google.com/maps/api/js?key=<YOUR_API_KEY>"></script>
+    <script src="http://maps.googleapis.com/maps/api/<YOUR_API_KEY>"></script>
     <script type="text/javascript" src="../src/chart-markerclusterer.js"></script>
     <script>
         function initialize() {
@@ -42,6 +42,14 @@
             });
 
             var opt = {
+                "styles" : [
+                    {textColor: "black", textSize: 15, height: 60, width: 60},
+                    {textColor: "black", textSize: 15, height: 70, width: 70},                    
+                    {textColor: "black", textSize: 15, height: 80, width: 80},
+                    {textColor: "black", textSize: 15, height: 90, width: 90},                    
+                    {textColor: "black", textSize: 15, height: 100, width: 100}
+                ],
+
                 "legend": {
                     "Fatal" : "#FF0066",
                     "Very serious injuries" : "#FF9933",
